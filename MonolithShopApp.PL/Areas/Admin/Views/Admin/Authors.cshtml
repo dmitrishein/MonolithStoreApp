@@ -1,0 +1,39 @@
+﻿@using EdProject.BLL.Models.ViewModels
+@using EdProject.BLL.Models.Author;
+@using EdProject.BLL.Models.Editions
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model AuthorsViewModel
+@{
+    ViewData["Title"] = "Authors list";
+}
+
+<a class="btn btn-primary" asp-controller="Admin" asp-action="CreateAuthor">Create New Author</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th >Id</th>
+            <th >Name</th>
+            <th >Works</th>
+            <th >Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (AuthorInEditionModel author in Model.AuthorsList)
+        {
+            <tr>
+                <td>@author.Id</td>
+                <td>@author.Name</td>
+                <td>
+                    @foreach (EditionModel edition in author.Editions)
+                    {
+                        <p>@edition.Title</p>
+                    }
+                </td>
+                <td class="authors-controls">
+                    <a class="btn btn-primary" asp-controller="Admin" asp-action="UpdateAuthor" asp-route-id="@author.Id">Edit</a> |
+                    <a class="btn btn-primary" asp-controller="Admin" asp-action="RemoveAuthor" asp-route-id="@author.Id">Remove</a> 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

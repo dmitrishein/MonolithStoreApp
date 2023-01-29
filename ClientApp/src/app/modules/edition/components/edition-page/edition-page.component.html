@@ -1,0 +1,84 @@
+<!-- Top -->
+<div  class="top-container">
+
+<div class="items-count" clickCatcher>
+  Items per Page:
+  <select [ngModel] ="selectedSize" (ngModelChange)="handlePageSizeChange($event)">
+    <option [ngValue]="ps" *ngFor="let ps of pageSizes" >
+      {{ ps }}
+    </option>
+  </select>
+</div>
+
+<div class="sort-types">
+  Sort by:
+  <select [ngModel] = "selectedSortType" (ngModelChange)="handlePageSorting($event)">
+    <option  [ngValue]="sort" *ngFor="let sort of sortTypeList" >
+      {{ sort.name }}
+    </option>
+  </select>
+</div>
+
+<div class="search-field">
+  <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="pageParams.SearchString"/>
+  <button (click)="getPage()">Search
+    <mat-icon>search</mat-icon> 
+  </button>
+</div>
+  
+
+
+</div>
+<!-- Top -->
+
+<div class="filter-side">
+<!-- Filter Left Side -->
+<section class="example-section" [formGroup]="categories">
+  <h4>Select categories :</h4>
+  <p><mat-checkbox formControlName="book">Books</mat-checkbox></p>
+  <p><mat-checkbox formControlName="magazine">Magazine</mat-checkbox></p>
+  <p><mat-checkbox formControlName="newspaper">Newspaper</mat-checkbox></p>
+</section>
+ <ngx-slider class ="price-selector-slider" [(value)]="minVal" [(highValue)]="maxVal" [options]="sliderOptions" (mouseup)="sliderEvent()"></ngx-slider>
+ <button (click)="filterByCategories()">Apply filter</button>
+ <button (click)="resetFilter()">Reset filter</button>
+</div>
+<!-- Filter Left Side -->
+
+<!-- Container with editions -->
+<div class="editions-contatiner">
+<pagination-controls class="paginator" (pageChange)="pageChanged($event)"></pagination-controls>
+<mat-grid-list cols="4" rowHeight="1:1.6">
+    <mat-grid-tile *ngFor="let edition of editionList | paginate: { itemsPerPage:pageParams.ElementsPerPage, currentPage:pageParams.CurrentPageNumber,totalItems: totalItemsCount  }">
+      <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{edition?.title}}</mat-card-title>
+            <mat-card-subtitle>{{edition.type}}</mat-card-subtitle>
+          </mat-card-header>
+          <img height="300px" width="300px" src="https://img.icons8.com/emoji/452/closed-book.png" alt="edition" routerLink="/detail/{{edition.id}}">
+          <mat-card-content>
+            <p class="price">Price : {{edition.price | number:'1.2-2'}}$</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <div *ngIf="edition.status === 'Available'" > 
+              <button *ngIf="!isInCart(edition)" (click)="addToCart(edition)" mat-button>
+                <mat-icon>add_shopping_cart</mat-icon>
+                Add to cart
+              </button>
+              <button *ngIf="isInCart(edition)" (click)="removeFromCart(edition)" mat-button>
+                <mat-icon>done</mat-icon>
+                Added to cart
+              </button>
+            </div>
+            <div *ngIf="edition.status != 'Available'" > 
+                <h3>Out of Stock</h3>
+            </div>
+          </mat-card-actions>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>
+
+<!-- Container with editions -->
+
