@@ -17,8 +17,10 @@ Step to deploy this project run
 
 1. Clone repository
 2. Add DB connection string to appsetting.json
-3. Run API
-4. Open ClientApp and use command
+3. Add your Stripe keys to appsettings.json
+4. Write your mail credentials in appsetting to use features: confirm account / reset password
+5. Run API
+6. Open ClientApp and use command
 ```bash
   ng serve
 ```
