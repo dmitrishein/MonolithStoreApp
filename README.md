@@ -1,6 +1,6 @@
 # MonolithShopApp
 
-My first project. Consist of a client application, API, and admin application that was created with Razor Pages. "Monolith" prefix due to application architecture. It was created by me when I was an intern
+My first project. Consist of a client application, API, and admin application that was created with Razor Pages. "Monolith" prefix due to application architecture. It was created by me when I was an intern🤓
 
 ## Tech Stack
 
