@@ -8744,11 +8744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programming\\MonolithStore\\MonolithShopApp.DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Programming\\MonolithStoreApp\\MonolithShopApp.DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Programming\\MonolithStore\\MonolithShopApp.DAL\\DAL.csproj",
+      "projectPath": "C:\\Programming\\MonolithStoreApp\\MonolithShopApp.DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\drgho\\.nuget\\packages\\",
-      "outputPath": "C:\\Programming\\MonolithStore\\MonolithShopApp.DAL\\obj\\",
+      "outputPath": "C:\\Programming\\MonolithStoreApp\\MonolithShopApp.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

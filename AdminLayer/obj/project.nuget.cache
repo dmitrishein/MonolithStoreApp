@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xA6xXr/rHB5iT818G46dBjFt8y9O9pAv6EFreW85qGknd9PntnwVI9Dyx0owloDtCbIgLfrqguLnIGVC7gli3g==",
+  "dgSpecHash": "9pwh1TDSylgU69FU61vns5MSn2kAyGurUPBQ8hIbnDrFgoCsY7+toPUZLMRvexZzMjEmJjCoC/528Irm5aXorA==",
   "success": true,
-  "projectFilePath": "C:\\Programming\\MonolithStore\\AdminLayer\\AdminLayer.csproj",
+  "projectFilePath": "C:\\Programming\\MonolithStoreApp\\AdminLayer\\AdminLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\drgho\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\drgho\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

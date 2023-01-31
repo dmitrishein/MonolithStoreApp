@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sdpXxhm5AX0Nvr7hHO6BQ/+xJ0UPAf/y0rz+/Ciijhd57wELGo0XxF8zrh0FBI8gYUSSYj/Yo6BF7fW/97qmuw==",
+  "dgSpecHash": "aH2sJMahZ76xgieWdWt4w4sbKRZo/oU08TTKOm6lo+Yuatr8q7T3WvGZQ68ViohgDHByx61jycotEZIJ7tqu/w==",
   "success": true,
-  "projectFilePath": "C:\\Programming\\MonolithStore\\MonolithShopApp.DAL\\DAL.csproj",
+  "projectFilePath": "C:\\Programming\\MonolithStoreApp\\MonolithShopApp.DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\drgho\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\drgho\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
