@@ -37,8 +37,3 @@ Password: Admin756
 **Test User Credentials**\
 Login: userex@sample.te \
 Password: 123User 
-
-## Feedback
-
-If you have any feedback, please reach out to me at drghost9899@gmail.com
-
